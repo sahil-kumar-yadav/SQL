@@ -86,10 +86,18 @@ WHERE s.id IS NULL;
 
 ```
 
-## 
+## SLEF JOIN
 
 ```SQL
+SELECT *
+FROM employee as a
+JOIN employee as b
+ON a.id = b.manager_id;
 
+SELECT a.name , b.name
+FROM employee as a
+JOIN employee as b
+ON a.id = b.manager_id;
 
 ```
 
